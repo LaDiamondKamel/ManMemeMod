@@ -1,4 +1,4 @@
-plugins {
+ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
