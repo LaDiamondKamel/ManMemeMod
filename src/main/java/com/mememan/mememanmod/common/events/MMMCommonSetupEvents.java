@@ -34,6 +34,7 @@ public class MMMCommonSetupEvents {
         public static void onAttributeRegisterer(EntityAttributeCreationEvent event) {
             event.put(MMMEntityTypes.MANMEME.get(), ManMeme.createAttributes().build());
             event.put(MMMEntityTypes.MANMEMECOIN.get(), ManMemeCoin.createAttributes().build());
+            event.put(MMMEntityTypes.MEMEMAN.get(), ManMemeCoin.createAttributes().build());
         }
 
 
