@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "manmememod:item/man_meme_coin_item"
+  }
+}
