@@ -8,7 +8,5 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class ManMemeRenderer extends GeoEntityRenderer<ManMeme> {
 
 
-    public ManMemeRenderer(EntityRendererProvider.Context context) {
-        super(context, new ManMemeModel());
-    }
+    public ManMemeRenderer(EntityRendererProvider.Context context) { super(context, new ManMemeModel()); }
 }
