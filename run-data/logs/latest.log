@@ -1,38 +1,40 @@
-[04Jul2024 19:49:14.018] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
-[04Jul2024 19:49:14.023] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by JetBrains s.r.o.; OS Windows 11 arch amd64 version 10.0
-[04Jul2024 19:49:14.134] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[04Jul2024 19:49:14.191] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/pc/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[04Jul2024 19:49:14.585] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.1\b9fa98d5c9fa107169a3390a1c8993d2134fbf54\javafmllanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[04Jul2024 19:49:14.602] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.1\aaa252b4d4c34d0c02e647d7a2ef3df3bc11d73a\lowcodelanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[04Jul2024 19:49:14.615] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.1\1722b26446496b5e686cdf124342e8f7fd33dc91\mclanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[04Jul2024 19:49:14.624] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.1\4ed2bfe4ae3a6c27f587d45f58d648db68d19c00\fmlcore-1.20.1-47.3.1.jar is missing mods.toml file
-[04Jul2024 19:49:14.833] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[04Jul2024 19:49:15.909] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[04Jul2024 19:49:15.911] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
-[04Jul2024 19:49:16.176] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using G:\ManMemeMod\build\createSrgToMcp\output.srg
-[04Jul2024 19:49:16.439] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [manmememod]
-[04Jul2024 19:49:19.951] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.1, for MC 1.20.1 with MCP 20230612.114412
-[04Jul2024 19:49:19.952] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.1 Initialized
-[04Jul2024 19:49:20.038] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[04Jul2024 19:49:20.472] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pc/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[04Jul2024 19:49:20.472] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pc/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[04Jul2024 19:49:20.600] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Block Models
-[04Jul2024 19:49:20.602] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Block Models finished after 1 ms
-[04Jul2024 19:49:20.602] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: BlockState Provider
-[04Jul2024 19:49:20.602] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: BlockState Provider finished after 0 ms
-[04Jul2024 19:49:20.602] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Item Models
-[04Jul2024 19:49:20.613] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Item Models finished after 11 ms
-[04Jul2024 19:49:20.613] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Language Provider (en_us)
-[04Jul2024 19:49:20.625] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Language Provider (en_us) finished after 10 ms
-[04Jul2024 19:49:20.625] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[04Jul2024 19:49:20.638] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 12 ms
-[04Jul2024 19:49:20.638] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Block Tags
-[04Jul2024 19:49:20.731] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Block Tags finished after 92 ms
-[04Jul2024 19:49:20.731] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Item Tags
-[04Jul2024 19:49:20.733] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Item Tags finished after 1 ms
-[04Jul2024 19:49:20.733] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: EntityType Tags
-[04Jul2024 19:49:20.734] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: EntityType Tags finished after 0 ms
-[04Jul2024 19:49:20.734] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[04Jul2024 19:49:20.735] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 0 ms
-[04Jul2024 19:49:20.735] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 134 ms
-[04Jul2024 19:49:20.738] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 3, old count: 3, new count: 4, removed stale: 0, written: 0
+[07Jul2024 21:13:55.853] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
+[07Jul2024 21:13:55.856] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by JetBrains s.r.o.; OS Windows 11 arch amd64 version 10.0
+[07Jul2024 21:13:55.963] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[07Jul2024 21:13:56.018] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/pc/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[07Jul2024 21:13:56.437] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.1\b9fa98d5c9fa107169a3390a1c8993d2134fbf54\javafmllanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[07Jul2024 21:13:56.442] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.1\aaa252b4d4c34d0c02e647d7a2ef3df3bc11d73a\lowcodelanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[07Jul2024 21:13:56.448] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.1\1722b26446496b5e686cdf124342e8f7fd33dc91\mclanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[07Jul2024 21:13:56.454] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.1\4ed2bfe4ae3a6c27f587d45f58d648db68d19c00\fmlcore-1.20.1-47.3.1.jar is missing mods.toml file
+[07Jul2024 21:13:56.590] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[07Jul2024 21:13:57.818] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[07Jul2024 21:13:57.822] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
+[07Jul2024 21:13:58.168] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using G:\ManMemeMod\build\createSrgToMcp\output.srg
+[07Jul2024 21:13:58.498] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [manmememod]
+[07Jul2024 21:14:02.365] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.1, for MC 1.20.1 with MCP 20230612.114412
+[07Jul2024 21:14:02.365] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.1 Initialized
+[07Jul2024 21:14:02.409] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[07Jul2024 21:14:02.845] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pc/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[07Jul2024 21:14:02.847] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pc/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[07Jul2024 21:14:03.029] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Block Models
+[07Jul2024 21:14:03.060] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Block Models finished after 30 ms
+[07Jul2024 21:14:03.060] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: BlockState Provider
+[07Jul2024 21:14:03.444] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: BlockState Provider finished after 382 ms
+[07Jul2024 21:14:03.444] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Item Models
+[07Jul2024 21:14:03.448] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Item Models finished after 4 ms
+[07Jul2024 21:14:03.448] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Language Provider (en_us)
+[07Jul2024 21:14:03.459] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Language Provider (en_us) finished after 9 ms
+[07Jul2024 21:14:03.459] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[07Jul2024 21:14:03.510] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 49 ms
+[07Jul2024 21:14:03.510] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Block Tags
+[07Jul2024 21:14:03.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Block Tags finished after 38 ms
+[07Jul2024 21:14:03.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Item Tags
+[07Jul2024 21:14:03.550] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Item Tags finished after 1 ms
+[07Jul2024 21:14:03.550] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: EntityType Tags
+[07Jul2024 21:14:03.551] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: EntityType Tags finished after 0 ms
+[07Jul2024 21:14:03.551] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Painting Tags
+[07Jul2024 21:14:03.567] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Painting Tags finished after 16 ms
+[07Jul2024 21:14:03.567] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[07Jul2024 21:14:03.568] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 0 ms
+[07Jul2024 21:14:03.568] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 538 ms
+[07Jul2024 21:14:03.576] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 8, old count: 9, new count: 9, removed stale: 0, written: 1

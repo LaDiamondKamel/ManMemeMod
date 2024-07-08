@@ -1,6 +1,7 @@
 package com.mememan.mememanmod.datagen;
 
 import com.mememan.mememanmod.ManMemeMod;
+import com.mememan.mememanmod.common.registry.MMMBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FarmBlock;
@@ -23,6 +24,7 @@ public class MMMBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {//TODO Automate
+        simpleBlock(MMMBlocks.MANMEMEBLOCK.get());
     }
 
     protected void farmland(FarmBlock farmBlock) {

@@ -19,12 +19,12 @@ public class ManMemeMod {
     public static final String MOD_NAME = "Man Meme Mod";
     public static final Logger LOGGER = LogUtils.getLogger();
     private static ManMemeMod INSTANCE;
-
     public ManMemeMod() {
         INSTANCE = this;
 
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+
 
         if (modBus != null && forgeBus != null) MMModManager.registerAll(modBus, forgeBus);
     }

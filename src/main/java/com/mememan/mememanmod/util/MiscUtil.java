@@ -38,13 +38,13 @@ public final class MiscUtil {
     }
 
     /**
-     * Creates and adds a {@link MutableComponent} containing {@link TranslatableContents} to {@link ESLanguageProvider#MANUAL_TRANSLATIONS}.
+     * Creates and adds a {@link MutableComponent} containing {@link TranslatableContents} to {@link MMMLanguageProvider#MANUAL_TRANSLATIONS}.
      *
      * @param translatableComponent The {@link MutableComponent} (usually created using {@link Component#translatable(String)} or its other method
      *                              variants) containing the translation key to translate.
      * @param defaultTranslation The default unlocalized value of the specified translation key passed in for data generation.
      *
-     * @return {@code translatableComponent} after adding it to {@link ESLanguageProvider#MANUAL_TRANSLATIONS} for data generation.
+     * @return {@code translatableComponent} after adding it to {@link MMMLanguageProvider#MANUAL_TRANSLATIONS} for data generation.
      */
     public static MutableComponent translatableDefault(MutableComponent translatableComponent, String defaultTranslation) {
         MMMLanguageProvider.addManualTranslation(ChatFormatting.stripFormatting(translatableComponent.toString()), defaultTranslation);

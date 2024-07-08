@@ -1,8 +1,8 @@
 {
+  "block.manmememod.manmemeblock": "Manmemeblock",
   "creativemodetab.mmm.manmememod_blocks": "Manmememod Blocks",
   "creativemodetab.mmm.manmememod_gear": "Manmememod Gear",
   "creativemodetab.mmm.manmememod_items": "Manmememod Items",
   "item.manmememod.bearded_sword": "Bearded Sword",
-  "item.manmememod.man_meme_coin_item": "Man Meme Coin Item",
-  "item.manmememod.mememan": "Meme Man"
+  "item.manmememod.man_meme_coin_item": "Man Meme Coin Item"
 }

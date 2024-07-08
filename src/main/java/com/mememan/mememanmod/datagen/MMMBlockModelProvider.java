@@ -1,6 +1,7 @@
 package com.mememan.mememanmod.datagen;
 
 import com.mememan.mememanmod.ManMemeMod;
+import com.mememan.mememanmod.common.registry.MMMBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -20,6 +21,7 @@ public class MMMBlockModelProvider extends BlockModelProvider {
 
     @Override
     protected void registerModels() { //TODO Automate
+        cubeAll(MMMBlocks.MANMEMEBLOCK.get());
     }
 
     protected void cubeAll(Block targetBlock) {

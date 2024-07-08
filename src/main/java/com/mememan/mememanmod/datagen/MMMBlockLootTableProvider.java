@@ -18,6 +18,7 @@ public class MMMBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() { //TODO Automate
+        dropSelf(MMMBlocks.MANMEMEBLOCK.get());
     }
 
     @Override

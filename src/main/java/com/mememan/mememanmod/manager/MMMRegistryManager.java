@@ -13,5 +13,6 @@ public final class MMMRegistryManager {
         MMMBlocks.BLOCKS.register(modBus);
         MMMItems.ITEMS.register(modBus);
         MMMEntityTypes.ENTITY_TYPES.register(modBus);
+        MMMPaintings.PAINTING_VARIANTS.register(modBus);
     }
 }
