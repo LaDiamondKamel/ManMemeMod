@@ -1,9 +1,6 @@
 package com.mememan.mememanmod.common.events;
 
-import com.mememan.mememanmod.common.entity.ManMeme;
-import com.mememan.mememanmod.common.entity.ManMemeCoin;
-import com.mememan.mememanmod.common.entity.ManMemeVillager;
-import com.mememan.mememanmod.common.entity.MemeMan;
+import com.mememan.mememanmod.common.entity.*;
 import com.mememan.mememanmod.common.registry.MMMEntityTypes;
 import com.mememan.mememanmod.datagen.*;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -37,6 +34,7 @@ public class MMMCommonSetupEvents {
             event.put(MMMEntityTypes.MANMEME.get(), ManMeme.createAttributes().build());
             event.put(MMMEntityTypes.MANMEMECOIN.get(), ManMemeCoin.createAttributes().build());
             event.put(MMMEntityTypes.MEMEMAN.get(), MemeMan.createAttributes().build());
+            event.put(MMMEntityTypes.MEMEMANCAT.get(), MemeManCat.createAttributes().build());
             event.put(MMMEntityTypes.MANMEMEVILLAGER.get(), ManMemeVillager.createAttributes().build());
         }
 

@@ -1,9 +1,6 @@
 package com.mememan.mememanmod.common.entity.goals;
 
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+
 import com.mememan.mememanmod.common.entity.MemeMan;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 
