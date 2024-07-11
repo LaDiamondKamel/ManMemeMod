@@ -10,6 +10,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 public class MMMBlockStateProvider extends BlockStateProvider {
@@ -23,8 +24,9 @@ public class MMMBlockStateProvider extends BlockStateProvider {
     }
 
     @Override
-    protected void registerStatesAndModels() {//TODO Automate
+    protected void registerStatesAndModels() {
         simpleBlock(MMMBlocks.MANMEMEBLOCK.get());
+        blockWithItem(MMMBlocks.MANMEMEPORTAL);
     }
 
     protected void farmland(FarmBlock farmBlock) {
@@ -36,6 +38,9 @@ public class MMMBlockStateProvider extends BlockStateProvider {
 
     protected void topBlock(Block targetBlock) {
         simpleBlock(targetBlock, new ConfiguredModel(models().cubeTop(ForgeRegistries.BLOCKS.getKey(targetBlock).getPath(), ManMemeMod.prefix("block/" + ForgeRegistries.BLOCKS.getKey(targetBlock).getPath() + "_side"), ManMemeMod.prefix("block/" + ForgeRegistries.BLOCKS.getKey(targetBlock).getPath() + "_top"))));
+    }
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }
 

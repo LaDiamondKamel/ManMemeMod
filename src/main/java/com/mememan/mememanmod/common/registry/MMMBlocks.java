@@ -20,6 +20,7 @@ public class MMMBlocks {
     public static final DeferredRegister<Item> ITEM_BLOCKS = DeferredRegister.create(ForgeRegistries.ITEMS, ManMemeMod.MODID);
 
     public static final RegistryObject<Block> MANMEMEBLOCK = registerBlock("manmemeblock", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
+    public static final RegistryObject<Block> MANMEMEPORTAL = registerBlock("manmemeportal", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).noCollission().noLootTable().noOcclusion()));
 
     // Wet Farder
     public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier) {
