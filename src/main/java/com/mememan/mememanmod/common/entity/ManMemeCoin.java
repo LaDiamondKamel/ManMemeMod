@@ -34,7 +34,7 @@ public class ManMemeCoin extends Animal implements GeoEntity {
 
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.15D).add(Attributes.ARMOR, 2.0D).add(Attributes.MAX_HEALTH, 10000.0D);
+        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.15D).add(Attributes.ARMOR, 2.0D).add(Attributes.MAX_HEALTH, 150.0D);
     }
 
     @Override

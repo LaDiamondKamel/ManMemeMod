@@ -35,7 +35,7 @@ public class MemeManCat extends Monster implements GeoEntity {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.10D).add(Attributes.ARMOR, 20.0D).add(Attributes.MAX_HEALTH, 10000.0D);
+        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.10D).add(Attributes.ARMOR, 20.0D).add(Attributes.MAX_HEALTH, 100.0D);
     }
 
     @Override

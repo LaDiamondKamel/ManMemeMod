@@ -3,6 +3,7 @@ package com.mememan.mememanmod.worldgen.biome;
 import com.mememan.mememanmod.ManMemeMod;
 import com.mememan.mememanmod.Sounds.MMMSounds;
 import com.mememan.mememanmod.common.registry.MMMEntityTypes;
+import it.unimi.dsi.fastutil.Pair;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -10,9 +11,12 @@ import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+
+import java.util.List;
 
 public class MMMBiomes {
     public static final ResourceKey<Biome> MANMEME_BIOME = ResourceKey.create(Registries.BIOME,
@@ -33,9 +37,15 @@ public class MMMBiomes {
 
     public static Biome testBiome(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MEMEMANCAT.get(), 2, 3, 5));
+        List.of(
+                Pair.of(
+                        spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MEMEMANCAT.get(), 2, 3, 5)),
+                        spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MEMEMAN.get(), 2, 3, 5))
+                ), Pair.of(
+                        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MANMEME.get(), 5, 4, 4)),
+                        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MANMEMECOIN.get(), 1, 1, 1))
 
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MANMEME.get(), 5, 4, 4));
+        ));
 
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
@@ -69,8 +79,6 @@ public class MMMBiomes {
                         .foliageColorOverride(0x90671e)
                         .fogColor(0xfff1cc)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
-                        .backgroundMusic(Musics.createGameMusic(MMMSounds.MAN_MEME_SONG.getHolder().get())).build())
-                .build();
+                .build()).build();
     }
 }
-

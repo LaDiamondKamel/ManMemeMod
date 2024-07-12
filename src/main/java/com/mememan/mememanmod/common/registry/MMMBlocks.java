@@ -1,6 +1,7 @@
 package com.mememan.mememanmod.common.registry;
 
 import com.mememan.mememanmod.ManMemeMod;
+import com.mememan.mememanmod.common.custom.block.ManMemePortalBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -20,7 +21,7 @@ public class MMMBlocks {
     public static final DeferredRegister<Item> ITEM_BLOCKS = DeferredRegister.create(ForgeRegistries.ITEMS, ManMemeMod.MODID);
 
     public static final RegistryObject<Block> MANMEMEBLOCK = registerBlock("manmemeblock", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
-    public static final RegistryObject<Block> MANMEMEPORTAL = registerBlock("manmemeportal", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).noCollission().noLootTable().noOcclusion()));
+    public static final RegistryObject<ManMemePortalBlock> MANMEMEPORTAL = registerBlock("manmemeportal", () -> new ManMemePortalBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).noCollission().noLootTable().noOcclusion()));
 
     // Wet Farder
     public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier) {

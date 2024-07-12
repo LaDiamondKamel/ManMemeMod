@@ -2,10 +2,12 @@ package com.mememan.mememanmod.worldgen.portal;
 
 import com.mememan.mememanmod.common.custom.block.ManMemePortalBlock;
 import com.mememan.mememanmod.common.registry.MMMBlocks;
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.util.ITeleporter;
 
@@ -21,43 +23,23 @@ public class MMMPortal implements ITeleporter {
     }
 
     @Override
-    public Entity placeEntity(Entity entity, ServerLevel currentWorld, ServerLevel destinationWorld,
-                              float yaw, Function<Boolean, Entity> repositionEntity) {
-        entity = repositionEntity.apply(false);
-        int y = 61;
+    public Entity placeEntity(Entity entity, ServerLevel currentWorld, ServerLevel destWorld, float yaw, Function<Boolean, Entity> repositionEntity) {
+        repositionEntity.apply(false);
 
-        if (!insideDimension) {
-            y = thisPos.getY();
-        }
-
-        BlockPos destinationPos = new BlockPos(thisPos.getX(), y, thisPos.getZ());
-
-        int tries = 0;
-        while ((destinationWorld.getBlockState(destinationPos).getBlock() != Blocks.AIR) &&
-                !destinationWorld.getBlockState(destinationPos).canBeReplaced(Fluids.WATER) &&
-                (destinationWorld.getBlockState(destinationPos.above()).getBlock()  != Blocks.AIR) &&
-                !destinationWorld.getBlockState(destinationPos.above()).canBeReplaced(Fluids.WATER) && (tries < 25)) {
-            destinationPos = destinationPos.above(2);
-            tries++;
-        }
-
-        entity.setPos(destinationPos.getX(), destinationPos.getY(), destinationPos.getZ());
-
-        if (insideDimension) {
-            boolean doSetBlock = true;
-            for (BlockPos checkPos : BlockPos.betweenClosed(destinationPos.below(10).west(10),
-                    destinationPos.above(10).east(10))) {
-                if (destinationWorld.getBlockState(checkPos).getBlock() instanceof ManMemePortalBlock) {
-                    doSetBlock = false;
-                    break;
-                }
-            }
-            if (doSetBlock) {
-                destinationWorld.setBlock(destinationPos, MMMBlocks.MANMEMEPORTAL.get().defaultBlockState(), 3);
-            }
-        }
+        BlockPos curPos = entity.blockPosition();
+        entity.moveTo(curPos.getX() + 0.5, destWorld.getHeight(Heightmap.Types.WORLD_SURFACE, curPos.getX(), curPos.getZ()), curPos.getZ() + 0.5);
 
         return entity;
     }
+
+    @Override
+    public boolean isVanilla() {
+        return false;
+    }
+
+    public Sound getSound() {
+        return null;
+    }
+
 
 }

@@ -51,6 +51,7 @@ public class MMMCommonSetupEvents {
                 dataGen.addProvider(event.includeClient(), new MMMBlockStateProvider(dataGenPackOutput, curFileHelper));
                 dataGen.addProvider(event.includeClient(), new MMMItemModelProvider(dataGenPackOutput, curFileHelper));
                 dataGen.addProvider(event.includeClient(), new MMMLanguageProvider(dataGenPackOutput));
+                dataGen.addProvider(event.includeClient(), new MMMWorldGenProvider(dataGenPackOutput, lookupProvider));
 
                 MMMTagProvider.BlockTagProvider blockTagProvider = new MMMTagProvider.BlockTagProvider(dataGenPackOutput, lookupProvider, curFileHelper);
 

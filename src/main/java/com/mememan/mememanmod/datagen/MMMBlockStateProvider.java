@@ -39,7 +39,7 @@ public class MMMBlockStateProvider extends BlockStateProvider {
     protected void topBlock(Block targetBlock) {
         simpleBlock(targetBlock, new ConfiguredModel(models().cubeTop(ForgeRegistries.BLOCKS.getKey(targetBlock).getPath(), ManMemeMod.prefix("block/" + ForgeRegistries.BLOCKS.getKey(targetBlock).getPath() + "_side"), ManMemeMod.prefix("block/" + ForgeRegistries.BLOCKS.getKey(targetBlock).getPath() + "_top"))));
     }
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+    private <B extends Block> void blockWithItem(RegistryObject<B> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }
