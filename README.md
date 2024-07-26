@@ -1,3 +1,3 @@
 oh lala man meme mod
 
-credits: LaDiamond, Roy, Man Meme, Hilton.
+credits: LaDiamond, Man Meme, Hilton.
