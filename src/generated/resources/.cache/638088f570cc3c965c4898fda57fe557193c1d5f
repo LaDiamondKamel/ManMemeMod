@@ -1,3 +1,6 @@
-// 1.20.1	2024-07-07T18:19:41.0812792	Man Meme Mod: BlockState Provider
+// 1.20.1	2024-07-11T06:19:17.9253996	Man Meme Mod: BlockState Provider
 a39e7f5dbe094ab9fda08abf340eac479e583039 assets/manmememod/blockstates/manmemeblock.json
+9476df523af687a656f0bde72f18d1cca61f9784 assets/manmememod/blockstates/manmemeportal.json
 0ceb52d1d31193276e2121ca0433a29986c5e776 assets/manmememod/models/block/manmemeblock.json
+910725b3dce3a84b12cad9aaf56290d1e53ecf81 assets/manmememod/models/block/manmemeportal.json
+e733922456584e473526f142f5ef4562cdda2419 assets/manmememod/models/item/manmemeportal.json

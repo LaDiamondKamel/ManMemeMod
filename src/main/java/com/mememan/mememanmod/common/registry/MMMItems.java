@@ -1,19 +1,12 @@
 package com.mememan.mememanmod.common.registry;
 import com.mememan.mememanmod.ManMemeMod;
-import com.mememan.mememanmod.common.entity.ManMeme;
 import com.mememan.mememanmod.common.items.weapons.BeardedSword;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.decoration.Painting;
-import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.awt.*;
 
 public class MMMItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ManMemeMod.MODID);

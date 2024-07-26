@@ -1,7 +1,7 @@
 package com.mememan.mememanmod.client.events.renderer;
 
 import com.mememan.mememanmod.client.events.model.ManMemeVillagerModel;
-import com.mememan.mememanmod.common.entity.ManMemeVillager;
+import com.mememan.mememanmod.common.entity.creature.ManMemeVillager;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 

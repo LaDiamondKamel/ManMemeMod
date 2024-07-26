@@ -45,7 +45,7 @@ public class MMMBiomes {
                         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MANMEME.get(), 5, 4, 4)),
                         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(MMMEntityTypes.MANMEMECOIN.get(), 1, 1, 1))
 
-        ));
+                ));
 
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
@@ -79,6 +79,6 @@ public class MMMBiomes {
                         .foliageColorOverride(0x90671e)
                         .fogColor(0xfff1cc)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
-                .build()).build();
+                        .build()).build();
     }
 }

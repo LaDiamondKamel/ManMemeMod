@@ -1,6 +1,11 @@
 package com.mememan.mememanmod.common.events;
 
-import com.mememan.mememanmod.common.entity.*;
+import com.mememan.mememanmod.common.entity.boss.ManMemeBoss;
+import com.mememan.mememanmod.common.entity.creature.ManMeme;
+import com.mememan.mememanmod.common.entity.creature.ManMemeCoin;
+import com.mememan.mememanmod.common.entity.creature.ManMemeVillager;
+import com.mememan.mememanmod.common.entity.hostile.MemeMan;
+import com.mememan.mememanmod.common.entity.hostile.MemeManCat;
 import com.mememan.mememanmod.common.registry.MMMEntityTypes;
 import com.mememan.mememanmod.datagen.*;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -8,12 +13,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -36,6 +37,7 @@ public class MMMCommonSetupEvents {
             event.put(MMMEntityTypes.MEMEMAN.get(), MemeMan.createAttributes().build());
             event.put(MMMEntityTypes.MEMEMANCAT.get(), MemeManCat.createAttributes().build());
             event.put(MMMEntityTypes.MANMEMEVILLAGER.get(), ManMemeVillager.createAttributes().build());
+            event.put(MMMEntityTypes.MANMEMEBOSS.get(), ManMemeBoss.createAttributes().build());
         }
 
 

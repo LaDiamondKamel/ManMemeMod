@@ -18,5 +18,6 @@ public class MMMClientSetupEvents {
         event.registerEntityRenderer(MMMEntityTypes.MEMEMAN.get(), MemeManRenderer::new);
         event.registerEntityRenderer(MMMEntityTypes.MEMEMANCAT.get(), MemeManCatRenderer::new);
         event.registerEntityRenderer(MMMEntityTypes.MANMEMEVILLAGER.get(), ManMemeVillagerRenderer::new);
+        event.registerEntityRenderer(MMMEntityTypes.MANMEMEBOSS.get(), ManMemeBossRenderer::new);
     }
 }

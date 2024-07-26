@@ -1,7 +1,7 @@
 package com.mememan.mememanmod.common.entity.goals;
 
 
-import com.mememan.mememanmod.common.entity.MemeManCat;
+import com.mememan.mememanmod.common.entity.hostile.MemeManCat;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 
 public class MemeManCatAttackGoal extends MeleeAttackGoal {

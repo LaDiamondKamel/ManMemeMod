@@ -1,18 +1,13 @@
-package com.mememan.mememanmod.common.entity;
+package com.mememan.mememanmod.common.entity.creature;
+
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -22,26 +17,18 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class ManMemeCoin extends Animal implements GeoEntity {
-    protected static final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.manmemecoin.spin");
+
+public class ManMeme extends Animal implements GeoEntity {
+    protected static final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.manmeme.spin");
 
     private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
 
-    public ManMemeCoin(EntityType<ManMemeCoin> entityType, net.minecraft.world.level.Level level) {
+    public ManMeme(EntityType<ManMeme> entityType, net.minecraft.world.level.Level level) {
         super(entityType, level);
     }
 
-
-
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.15D).add(Attributes.ARMOR, 2.0D).add(Attributes.MAX_HEALTH, 150.0D);
-    }
-
-    @Override
-    protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-
-        this.goalSelector.addGoal(1, new TemptGoal(this, 1.2D, Ingredient.of(Items.BEEF), false));
+        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.15D).add(Attributes.ARMOR, 2.0D).add(Attributes.MAX_HEALTH, 100.0D);
     }
 
     @Nullable
@@ -52,7 +39,7 @@ public class ManMemeCoin extends Animal implements GeoEntity {
 
     @Override
     public void registerControllers(final AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(new AnimationController<>(this, "animation.manmemecoin.spin", 0, state -> {
+        controllerRegistrar.add(new AnimationController<>(this, "animation.manmeme.spin", 0, state -> {
             state.setAnimation(IDLE);
             return PlayState.CONTINUE;
         }));
@@ -68,5 +55,4 @@ public class ManMemeCoin extends Animal implements GeoEntity {
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.geoCache;
     }
-
 }
