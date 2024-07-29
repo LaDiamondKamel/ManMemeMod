@@ -39,7 +39,7 @@ public class ManMemeCoin extends Animal implements GeoEntity {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
 
-        this.goalSelector.addGoal(1, new TemptGoal(this, 1.2D, Ingredient.of(Items.BEEF), false));
+        this.goalSelector.addGoal(1, new TemptGoal(this, 2.2D, Ingredient.of(Items.BEEF), false));
     }
 
     @Nullable

@@ -1,6 +1,7 @@
 package com.mememan.mememanmod.common.registry;
 import com.mememan.mememanmod.ManMemeMod;
 import com.mememan.mememanmod.common.items.weapons.BeardedSword;
+import com.mememan.mememanmod.common.items.weapons.ManMemeMallet;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
@@ -14,6 +15,8 @@ public class MMMItems {
     public static final RegistryObject<Item> MAN_MEME_COIN_ITEM = ITEMS.register("man_meme_coin_item", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> BEARDED_SWORD = ITEMS.register("bearded_sword", () -> new BeardedSword(Tiers.NETHERITE, 6, -2.4F, new Item.Properties()));
+
+    public static final RegistryObject<Item> MAN_MEME_MALLET = ITEMS.register("man_meme_mallet", () -> new ManMemeMallet(Tiers.WOOD, 20, -5.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> MANMEME_HELMET = ITEMS.register("manmeme_helmet", () -> new ArmorItem(MMMArmorMaterial.MANMEME, ArmorItem.Type.HELMET, new Item.Properties()));
 

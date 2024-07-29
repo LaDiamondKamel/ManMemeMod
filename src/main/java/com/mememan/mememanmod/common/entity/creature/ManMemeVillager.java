@@ -62,7 +62,7 @@ public class ManMemeVillager extends Animal implements GeoEntity {
 
         else
             event.isMoving();
-            return event.setAndContinue(IDLE);
+        return event.setAndContinue(IDLE);
     }
     @Override
     public double getBoneResetTime() {

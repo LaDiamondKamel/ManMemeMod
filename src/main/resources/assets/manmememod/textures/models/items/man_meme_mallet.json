@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "manmememod:item/man_meme_mallet_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "manmememod:item/man_meme_mallet_2d"
+    },
+    "ground": {
+      "parent": "manmememod:item/man_meme_mallet_2d"
+    },
+    "fixed": {
+      "parent": "manmememod:item/man_meme_mallet_2d"
+    }
+  }
+}
