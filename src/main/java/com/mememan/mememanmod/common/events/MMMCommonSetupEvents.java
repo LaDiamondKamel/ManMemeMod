@@ -4,6 +4,7 @@ import com.mememan.mememanmod.common.entity.boss.ManMemeBoss;
 import com.mememan.mememanmod.common.entity.creature.ManMeme;
 import com.mememan.mememanmod.common.entity.creature.ManMemeCoin;
 import com.mememan.mememanmod.common.entity.creature.ManMemeVillager;
+import com.mememan.mememanmod.common.entity.creature.RatRod;
 import com.mememan.mememanmod.common.entity.hostile.MemeMan;
 import com.mememan.mememanmod.common.entity.hostile.MemeManCat;
 import com.mememan.mememanmod.common.registry.MMMEntityTypes;
@@ -38,6 +39,7 @@ public class MMMCommonSetupEvents {
             event.put(MMMEntityTypes.MEMEMANCAT.get(), MemeManCat.createAttributes().build());
             event.put(MMMEntityTypes.MANMEMEVILLAGER.get(), ManMemeVillager.createAttributes().build());
             event.put(MMMEntityTypes.MANMEMEBOSS.get(), ManMemeBoss.createAttributes().build());
+            event.put(MMMEntityTypes.RATROD.get(), RatRod.createAttributes().build());
         }
 
 

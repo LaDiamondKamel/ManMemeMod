@@ -1,9 +1,14 @@
 package com.mememan.mememanmod.common.entity.boss;
 
 import com.mememan.mememanmod.common.entity.goals.ManMemeBossAnimatableAttackGoal;
+import net.minecraft.core.Holder;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -12,6 +17,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import software.bernie.geckolib.GeckoLib;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -27,14 +33,25 @@ public class ManMemeBoss extends Monster implements GeoEntity {
 
     protected static final RawAnimation WALK = RawAnimation.begin().thenLoop("animation.man_meme_boss.walk");
 
+    protected static final RawAnimation DEATH = RawAnimation.begin().thenPlayAndHold("animation.man_meme_boss.death");
+
     protected static final RawAnimation SWING = RawAnimation.begin().thenPlayAndHold("animation.man_meme_boss.swing");
 
     private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
 
     private static final EntityDataAccessor<Boolean> IS_ATTACKING = SynchedEntityData.defineId(ManMemeBoss.class, EntityDataSerializers.BOOLEAN);
 
+    private ServerLevel level;
+
     public ManMemeBoss(EntityType<com.mememan.mememanmod.common.entity.boss.ManMemeBoss> entityType, net.minecraft.world.level.Level level) {
         super(entityType, level);
+    }
+
+    public void triggerDeathAnimation() {
+        this.setAnimation();
+    }
+
+    private void setAnimation() {
     }
 
     private static final EntityDataAccessor<Boolean> ATTACKING =
@@ -74,6 +91,29 @@ public class ManMemeBoss extends Monster implements GeoEntity {
 
         else
             return PlayState.STOP;
+    }
+
+    @Override
+    public void tickDeath() {
+        if (!level().isClientSide) {
+
+            this.triggerDeathAnimation();
+
+            this.deathScore++;
+
+            if (this.deathScore > 60)
+
+                this.remove(RemovalReason.KILLED);
+
+                this.level.broadcastEntityEvent(this, (byte) 60);
+
+                this.die(this.getLastDamageSource() != null ?
+                        this.getLastDamageSource() : new DamageSource((Holder<DamageType>) DamageTypes.GENERIC));
+        }
+    }
+
+    @Override
+    public void die(DamageSource damageSource) {
     }
 
 
