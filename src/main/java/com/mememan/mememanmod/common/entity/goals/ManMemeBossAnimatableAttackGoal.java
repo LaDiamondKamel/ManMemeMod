@@ -2,88 +2,60 @@ package com.mememan.mememanmod.common.entity.goals;
 
 
 import com.mememan.mememanmod.common.entity.boss.ManMemeBoss;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.phys.AABB;
 
-public class ManMemeBossAnimatableAttackGoal extends MeleeAttackGoal {
-    private final ManMemeBoss entity;
-    private int attackDelay = 70;
-    private int ticksUntilNextAttack = 100;
-    private boolean shouldCountTillNextAttack = false;
+import java.util.List;
 
-    public ManMemeBossAnimatableAttackGoal(PathfinderMob pMob, double pSpeedModifier, boolean pFollowingTargetEvenIfNotSeen) {
-        super(pMob, pSpeedModifier, pFollowingTargetEvenIfNotSeen);
-        entity = ((ManMemeBoss) pMob);
+public class ManMemeBossAnimatableAttackGoal extends Goal {
+
+    private final ManMemeBoss manMemeBoss;
+
+    int attackAnimationTimeout = 60;
+
+    int attackCooldown = 40;
+
+    public ManMemeBossAnimatableAttackGoal(ManMemeBoss manMemeBoss) {
+        this.manMemeBoss = manMemeBoss;
     }
 
-    @Override
-    public void start() {
-        super.start();
-        attackDelay = 40;
-        ticksUntilNextAttack = 40;
-    }
-
-    @Override
-    protected void checkAndPerformAttack(LivingEntity pEnemy, double pDistToEnemySqr) {
-        if (isEnemyWithinAttackDistance(pEnemy, pDistToEnemySqr)) {
-            shouldCountTillNextAttack = true;
-
-            if(isTimeToStartAttackAnimation()) {
-                entity.setAttacking(true);
-            }
-
-            if(isTimeToAttack()) {
-                this.mob.getLookControl().setLookAt(pEnemy.getX(), pEnemy.getEyeY(), pEnemy.getZ());
-                performAttack(pEnemy);
-            }
-        } else {
-            resetAttackCooldown();
-            shouldCountTillNextAttack = false;
-            entity.setAttacking(false);
-        }
-    }
-
-    private boolean isEnemyWithinAttackDistance(LivingEntity pEnemy, double pDistToEnemySqr) {
-        return pDistToEnemySqr <= this.getAttackReachSqr(pEnemy);
-    }
-
-    protected void resetAttackCooldown() {
-        this.ticksUntilNextAttack = this.adjustedTickDelay(attackDelay * 2);
-    }
-
-    protected boolean isTimeToAttack() {
-        return this.ticksUntilNextAttack <= 0;
-    }
-
-    protected boolean isTimeToStartAttackAnimation() {
-        return this.ticksUntilNextAttack <= attackDelay;
-    }
-
-    protected int getTicksUntilNextAttack() {
-        return this.ticksUntilNextAttack;
-    }
-
-
-    protected void performAttack(LivingEntity pEnemy) {
-        this.resetAttackCooldown();
-        this.mob.swing(InteractionHand.MAIN_HAND);
-        this.mob.doHurtTarget(pEnemy);
-    }
 
     @Override
     public void tick() {
         super.tick();
-        if(shouldCountTillNextAttack) {
-            this.ticksUntilNextAttack = Math.max(this.ticksUntilNextAttack - 1, 0);
+
+        if (attackAnimationTimeout > 0) {
+            List<ManMemeBoss> entitiesInMeleeRange = manMemeBoss.level().getNearbyEntities(ManMemeBoss.class, TargetingConditions.DEFAULT, manMemeBoss, new AABB(manMemeBoss.getX() - 5, manMemeBoss.getY() - 5, manMemeBoss.getZ() - 5, manMemeBoss.getX() + 5, manMemeBoss.getY() + 5, manMemeBoss.getZ() + 5));
+
+
+            attackAnimationTimeout--;
         }
+
+        if (attackAnimationTimeout == 0) {
+
+        }
+    }
+
+
+    @Override
+    public void start() {
+        super.start();
+        manMemeBoss.triggerAnim("animation.man_meme_boss", "swing");
+        attackCooldown = 40;
     }
 
 
     @Override
     public void stop() {
-        entity.setAttacking(false);
         super.stop();
+        attackAnimationTimeout = 0;
+    }
+
+
+    @Override
+    public boolean canUse() {
+        return manMemeBoss.isAlive() && manMemeBoss.getTarget() != null && manMemeBoss.getTarget().isAlive() && manMemeBoss.distanceTo(manMemeBoss.getTarget()) < 4;
+        //if boss is alive, if target isnt null, if target is alive
     }
 }

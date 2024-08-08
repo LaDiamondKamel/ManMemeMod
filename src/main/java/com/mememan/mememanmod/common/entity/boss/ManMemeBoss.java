@@ -2,10 +2,14 @@ package com.mememan.mememanmod.common.entity.boss;
 
 import com.mememan.mememanmod.common.entity.goals.ManMemeBossAnimatableAttackGoal;
 import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -17,7 +21,6 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import software.bernie.geckolib.GeckoLib;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -28,6 +31,12 @@ import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class ManMemeBoss extends Monster implements GeoEntity {
+    private static final EntityDataAccessor<Boolean> ATTACKING =
+            SynchedEntityData.defineId(ManMemeBoss.class, EntityDataSerializers.BOOLEAN);
+
+
+public final AnimationState attackAnimationState = new AnimationState(this, 2f, 2f, 2f,true);
+    public int attackAnimationTimeout = 0;
 
     protected static final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.man_meme_boss.idle");
 
@@ -43,45 +52,45 @@ public class ManMemeBoss extends Monster implements GeoEntity {
 
     private ServerLevel level;
 
+    private final ServerBossEvent bossEvent =
+             new ServerBossEvent(Component.literal("Man Meme Boss"), BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_20);
+
+
     public ManMemeBoss(EntityType<com.mememan.mememanmod.common.entity.boss.ManMemeBoss> entityType, net.minecraft.world.level.Level level) {
         super(entityType, level);
     }
-
-    public void triggerDeathAnimation() {
-        this.setAnimation();
-    }
-
-    private void setAnimation() {
-    }
-
-    private static final EntityDataAccessor<Boolean> ATTACKING =
-            SynchedEntityData.defineId(ManMemeBoss.class, EntityDataSerializers.BOOLEAN);
+        //im a retard, arent i?
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.20D).add(Attributes.ARMOR, 20.0D).add(Attributes.MAX_HEALTH, 1000.0D).add(Attributes.ATTACK_KNOCKBACK, 2.0f).add(Attributes.ATTACK_DAMAGE, 20f);
+        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.20D).add(Attributes.ARMOR, 20.0D).add(Attributes.MAX_HEALTH, 1000.0D).add(Attributes.ATTACK_KNOCKBACK, 5.0f).add(Attributes.ATTACK_DAMAGE, 70.0f);
     }
+
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(1, new ManMemeBossAnimatableAttackGoal(this, 1.0D, true));
+        this.goalSelector.addGoal(1, new ManMemeBossAnimatableAttackGoal(this));
 
 
         this.addBehaviourGoals();
     }
 
+
     protected void addBehaviourGoals() {
-    //    this.goalSelector.addGoal(1, new ManMemeBossAttackGoal(this, 4.0, false));
+        this.goalSelector.addGoal(1, new ManMemeBossAnimatableAttackGoal(this));
 
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true));
 
     }
 
+
     @Override
     public void registerControllers(final AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(new AnimationController<>(this, "animation.man_meme_boss.walk", 3, this::walkAnimController));
+        controllerRegistrar.add(new AnimationController<>(this, "animation.man_meme_boss", 3, this::walkAnimController).triggerableAnim("death", DEATH).triggerableAnim("swing", SWING));
     }
+
+
     protected <C extends com.mememan.mememanmod.common.entity.boss.ManMemeBoss> PlayState walkAnimController(final AnimationState<C> event) {
         if (event.isMoving())
             return event.setAndContinue(WALK);
@@ -93,24 +102,30 @@ public class ManMemeBoss extends Monster implements GeoEntity {
             return PlayState.STOP;
     }
 
+
     @Override
     public void tickDeath() {
         if (!level().isClientSide) {
 
-            this.triggerDeathAnimation();
+            triggerAnim("animation.man_meme_boss", "death");
 
-            this.deathScore++;
+            this.deathTime++;
 
-            if (this.deathScore > 60)
+            if (this.deathTime > 100)
 
                 this.remove(RemovalReason.KILLED);
+
+
+            if (level instanceof ServerLevel) {
 
                 this.level.broadcastEntityEvent(this, (byte) 60);
 
                 this.die(this.getLastDamageSource() != null ?
                         this.getLastDamageSource() : new DamageSource((Holder<DamageType>) DamageTypes.GENERIC));
+            }
         }
     }
+
 
     @Override
     public void die(DamageSource damageSource) {
@@ -121,9 +136,11 @@ public class ManMemeBoss extends Monster implements GeoEntity {
         this.entityData.set(ATTACKING, attacking);
     }
 
+
     public boolean isAttacking() {
         return this.entityData.get(ATTACKING);
     }
+
 
     @Override
     protected void defineSynchedData() {
@@ -131,13 +148,36 @@ public class ManMemeBoss extends Monster implements GeoEntity {
         this.entityData.define(ATTACKING, false);
     }
 
+
     @Override
     public double getBoneResetTime() {
         return GeoEntity.super.getBoneResetTime();
     }
 
+
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.geoCache;
+    }
+
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.startSeenByPlayer(pServerPlayer);
+         this.bossEvent.addPlayer(pServerPlayer);
+    }
+
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.stopSeenByPlayer(pServerPlayer);
+         this.bossEvent.removePlayer(pServerPlayer);
+    }
+
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+         this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
     }
 }
