@@ -64,6 +64,7 @@ public class MMMCommonSetupEvents {
                 dataGen.addProvider(event.includeServer(), new MMMTagProvider.ItemTagProvider(dataGenPackOutput, lookupProvider, blockTagProvider.contentsGetter(), curFileHelper));
                 dataGen.addProvider(event.includeServer(), new MMMTagProvider.EntityTypeTagProvider(dataGenPackOutput, lookupProvider, curFileHelper));
                 dataGen.addProvider(event.includeServer(), new MMMTagProvider.PaintingTagProvider(dataGenPackOutput, lookupProvider, curFileHelper));
+                dataGen.addProvider(event.includeServer(), new MMMLootTableProvider(dataGenPackOutput));
                 dataGen.addProvider(event.includeServer(), new MMMRecipeProvider(dataGenPackOutput));
         }
     }

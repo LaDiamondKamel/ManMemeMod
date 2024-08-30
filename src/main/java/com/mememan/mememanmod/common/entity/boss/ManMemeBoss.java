@@ -18,10 +18,15 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.MoveTowardsTargetGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import org.checkerframework.checker.units.qual.C;
 import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.GeoAnimatable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -35,7 +40,7 @@ public class ManMemeBoss extends Monster implements GeoEntity {
             SynchedEntityData.defineId(ManMemeBoss.class, EntityDataSerializers.BOOLEAN);
 
 
-public final AnimationState attackAnimationState = new AnimationState(this, 2f, 2f, 2f,true);
+    public final AnimationState attackAnimationState = new AnimationState(this, 2f, 2f, 2f,true);
     public int attackAnimationTimeout = 0;
 
     protected static final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.man_meme_boss.idle");
@@ -53,13 +58,13 @@ public final AnimationState attackAnimationState = new AnimationState(this, 2f, 
     private ServerLevel level;
 
     private final ServerBossEvent bossEvent =
-             new ServerBossEvent(Component.literal("Man Meme Boss"), BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_20);
+            new ServerBossEvent(Component.literal("Man Meme Boss"), BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_20);
 
 
     public ManMemeBoss(EntityType<com.mememan.mememanmod.common.entity.boss.ManMemeBoss> entityType, net.minecraft.world.level.Level level) {
         super(entityType, level);
     }
-        //im a retard, arent i?
+    //im a retard, arent i?
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.20D).add(Attributes.ARMOR, 20.0D).add(Attributes.MAX_HEALTH, 1000.0D).add(Attributes.ATTACK_KNOCKBACK, 5.0f).add(Attributes.ATTACK_DAMAGE, 70.0f);
@@ -68,10 +73,12 @@ public final AnimationState attackAnimationState = new AnimationState(this, 2f, 
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(0, new MoveTowardsTargetGoal(this, 1.0D, 1.0F));
+        this.goalSelector.addGoal(0, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(1, new FloatGoal(this));
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(1, new ManMemeBossAnimatableAttackGoal(this));
-
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 
         this.addBehaviourGoals();
     }
@@ -81,13 +88,13 @@ public final AnimationState attackAnimationState = new AnimationState(this, 2f, 
         this.goalSelector.addGoal(1, new ManMemeBossAnimatableAttackGoal(this));
 
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true));
-
     }
 
 
     @Override
     public void registerControllers(final AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(new AnimationController<>(this, "animation.man_meme_boss", 3, this::walkAnimController).triggerableAnim("death", DEATH).triggerableAnim("swing", SWING));
+        controllerRegistrar.add(new AnimationController<>(this, "animation.man_meme_boss", 3, this::walkAnimController).triggerableAnim("death", DEATH));
+        controllerRegistrar.add(new AnimationController<>(this, "animation.man_meme_boss.swing", 3, this::swingAnimController));
     }
 
 
@@ -99,7 +106,14 @@ public final AnimationState attackAnimationState = new AnimationState(this, 2f, 
             return event.setAndContinue(IDLE);
 
         else
-            return PlayState.STOP;
+            return PlayState.CONTINUE;
+    }
+
+    protected <D extends com.mememan.mememanmod.common.entity.boss.ManMemeBoss> PlayState swingAnimController(final AnimationState<D> event) {
+        if (isAttacking()) {
+            return event.setAndContinue(SWING);
+        } else event.getController().forceAnimationReset();
+        return !isAttacking() || isDeadOrDying() ? PlayState.STOP : PlayState.CONTINUE;
     }
 
 
@@ -164,20 +178,20 @@ public final AnimationState attackAnimationState = new AnimationState(this, 2f, 
     @Override
     public void startSeenByPlayer(ServerPlayer pServerPlayer) {
         super.startSeenByPlayer(pServerPlayer);
-         this.bossEvent.addPlayer(pServerPlayer);
+        this.bossEvent.addPlayer(pServerPlayer);
     }
 
 
     @Override
     public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
         super.stopSeenByPlayer(pServerPlayer);
-         this.bossEvent.removePlayer(pServerPlayer);
+        this.bossEvent.removePlayer(pServerPlayer);
     }
 
 
     @Override
     public void aiStep() {
         super.aiStep();
-         this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
+        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
     }
 }
