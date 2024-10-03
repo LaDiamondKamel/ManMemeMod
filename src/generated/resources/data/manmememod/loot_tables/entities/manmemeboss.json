@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "manmememod:man_meme_mallet"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "manmememod:entities/manmemeboss"
+}
