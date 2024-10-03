@@ -1,5 +1,6 @@
 package com.mememan.mememanmod.common.registry;
 import com.mememan.mememanmod.ManMemeMod;
+import com.mememan.mememanmod.common.items.tools.ManPickAxe;
 import com.mememan.mememanmod.common.items.weapons.BeardedSword;
 import com.mememan.mememanmod.common.items.weapons.ManMemeMallet;
 import net.minecraft.world.item.*;
@@ -17,6 +18,8 @@ public class MMMItems {
     public static final RegistryObject<Item> MAN_MEME_MALLET = ITEMS.register("man_meme_mallet", () -> new ManMemeMallet(Tiers.WOOD, 70, 2.4f, new Item.Properties().durability(10000).craftRemainder(Items.GOLD_INGOT)));
 
     public static final RegistryObject<Item> MANMEME_HELMET = ITEMS.register("manmeme_helmet", () -> new ArmorItem(MMMArmorMaterial.MANMEME, ArmorItem.Type.HELMET, new Item.Properties()));
+
+    public static final RegistryObject<Item> MANPICKAXE = ITEMS.register("manpickaxe", () -> new ManPickAxe(Tiers.DIAMOND, 5, -2.8f, new Item.Properties()));
 
     public static final RegistryObject<Item> MANMEME_CHESTPLATE = ITEMS.register("manmeme_chestplate", () -> new ArmorItem(MMMArmorMaterial.MANMEME, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
 
