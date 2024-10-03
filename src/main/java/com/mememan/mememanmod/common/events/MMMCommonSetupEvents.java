@@ -59,7 +59,6 @@ public class MMMCommonSetupEvents {
 
                 MMMTagProvider.BlockTagProvider blockTagProvider = new MMMTagProvider.BlockTagProvider(dataGenPackOutput, lookupProvider, curFileHelper);
 
-                dataGen.addProvider(event.includeServer(), new LootTableProvider(dataGenPackOutput, Collections.emptySet(), ObjectArrayList.of(new LootTableProvider.SubProviderEntry(MMMBlockLootTableProvider::new, LootContextParamSets.BLOCK))));
                 dataGen.addProvider(event.includeServer(), blockTagProvider);
                 dataGen.addProvider(event.includeServer(), new MMMTagProvider.ItemTagProvider(dataGenPackOutput, lookupProvider, blockTagProvider.contentsGetter(), curFileHelper));
                 dataGen.addProvider(event.includeServer(), new MMMTagProvider.EntityTypeTagProvider(dataGenPackOutput, lookupProvider, curFileHelper));

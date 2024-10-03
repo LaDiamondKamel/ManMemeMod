@@ -1,197 +1,42 @@
-[31Jul2024 13:40:30.496] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
-[31Jul2024 13:40:30.499] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.11 by JetBrains s.r.o.; OS Windows 11 arch amd64 version 10.0
-[31Jul2024 13:40:30.581] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[31Jul2024 13:40:30.620] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/pc/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[31Jul2024 13:40:30.945] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.1\b9fa98d5c9fa107169a3390a1c8993d2134fbf54\javafmllanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[31Jul2024 13:40:30.951] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.1\aaa252b4d4c34d0c02e647d7a2ef3df3bc11d73a\lowcodelanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[31Jul2024 13:40:30.958] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.1\1722b26446496b5e686cdf124342e8f7fd33dc91\mclanguage-1.20.1-47.3.1.jar is missing mods.toml file
-[31Jul2024 13:40:30.965] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.1\4ed2bfe4ae3a6c27f587d45f58d648db68d19c00\fmlcore-1.20.1-47.3.1.jar is missing mods.toml file
-[31Jul2024 13:40:31.086] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[31Jul2024 13:40:32.003] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[31Jul2024 13:40:32.006] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
-[31Jul2024 13:40:32.262] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using G:\ManMemeMod\build\createSrgToMcp\output.srg
-[31Jul2024 13:40:32.513] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [manmememod]
-[31Jul2024 13:40:35.542] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.1, for MC 1.20.1 with MCP 20230612.114412
-[31Jul2024 13:40:35.545] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.1 Initialized
-[31Jul2024 13:40:35.607] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[31Jul2024 13:40:35.793] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Non [a-z0-9/._-] character in path of location: manmememod:RatRod
-	Index: 5
-	Listeners:
-		0: NORMAL
-		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@34aee14b handleEvent(Lnet/minecraftforge/registries/RegisterEvent;)V
-		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@2cecc535 handleEvent(Lnet/minecraftforge/registries/RegisterEvent;)V
-		3: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@1ec8faa0 handleEvent(Lnet/minecraftforge/registries/RegisterEvent;)V
-		4: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@167c17d1 handleEvent(Lnet/minecraftforge/registries/RegisterEvent;)V
-		5: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@3e5556a5 handleEvent(Lnet/minecraftforge/registries/RegisterEvent;)V
-		6: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@f82d947 handleEvent(Lnet/minecraftforge/registries/RegisterEvent;)V
-net.minecraft.ResourceLocationException: Non [a-z0-9/._-] character in path of location: manmememod:RatRod
-	at TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.ResourceLocation.assertValidPath(ResourceLocation.java:236)
-	at TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.ResourceLocation.<init>(ResourceLocation.java:38)
-	at TRANSFORMER/manmememod@1.0.0/com.mememan.mememanmod.common.registry.MMMEntityTypes.lambda$static$6(MMMEntityTypes.java:33)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:328)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.registries.__EventDispatcher_handleEvent_RegisterEvent.invoke(.dynamic)
-	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73)
-	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.EventBus.post(EventBus.java:315)
-	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.EventBus.post(EventBus.java:296)
-	at LAYER PLUGIN/javafmllanguage@1.20.1-47.3.1/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:114)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.lambda$postEventWithWrapInModOrder$33(ModLoader.java:346)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModList.forEachModInOrder(ModList.java:227)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:344)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:337)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.registries.GameData.postRegisterEvents(GameData.java:329)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.common.ForgeStatesProvider.lambda$new$4(ForgeStatesProvider.java:25)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.handleInlineTransition(ModLoader.java:217)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$19(ModLoader.java:209)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:209)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$13(ModLoader.java:183)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at LAYER PLUGIN/fmlcore@1.20.1-47.3.1/net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:183)
-	at TRANSFORMER/forge@47.3.1/net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:43)
-	at TRANSFORMER/minecraft@1.20.1/net.minecraft.data.Main.main(Main.java:90)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at MC-BOOTSTRAP/fmlloader@1.20.1-47.3.1/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111)
-	at MC-BOOTSTRAP/fmlloader@1.20.1-47.3.1/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.dataService(CommonLaunchHandler.java:107)
-	at MC-BOOTSTRAP/fmlloader@1.20.1-47.3.1/net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.devService(ForgeDataUserdevLaunchHandler.java:22)
-	at MC-BOOTSTRAP/fmlloader@1.20.1-47.3.1/net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.Launcher.run(Launcher.java:108)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.Launcher.main(Launcher.java:78)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)
-	at MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
-	at cpw.mods.bootstraplauncher@1.1.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141)
-
-[31Jul2024 13:40:35.794] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegisterEvent dispatch for modid manmememod
-net.minecraft.ResourceLocationException: Non [a-z0-9/._-] character in path of location: manmememod:RatRod
-	at net.minecraft.resources.ResourceLocation.assertValidPath(ResourceLocation.java:236) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/:?]
-	at net.minecraft.resources.ResourceLocation.<init>(ResourceLocation.java:38) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/:?]
-	at com.mememan.mememanmod.common.registry.MMMEntityTypes.lambda$static$6(MMMEntityTypes.java:33) ~[%23196!/:?]
-	at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:328) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.registries.__EventDispatcher_handleEvent_RegisterEvent.invoke(.dynamic) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar:?]
-	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar:?]
-	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar:?]
-	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:114) ~[javafmllanguage-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.lambda$postEventWithWrapInModOrder$33(ModLoader.java:346) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
-	at net.minecraftforge.fml.ModList.forEachModInOrder(ModList.java:227) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:344) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:337) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.registries.GameData.postRegisterEvents(GameData.java:329) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at net.minecraftforge.common.ForgeStatesProvider.lambda$new$4(ForgeStatesProvider.java:25) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.handleInlineTransition(ModLoader.java:217) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$19(ModLoader.java:209) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
-	at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:209) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$13(ModLoader.java:183) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
-	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:183) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:43) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at net.minecraft.data.Main.main(Main.java:90) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.dataService(CommonLaunchHandler.java:107) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.devService(ForgeDataUserdevLaunchHandler.java:22) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[31Jul2024 13:40:35.884] [main/FATAL] [net.minecraftforge.registries.GameData/]: Failed to register some entries, see suppressed exceptions for details
-java.lang.RuntimeException: null
-	at net.minecraftforge.registries.GameData.postRegisterEvents(GameData.java:315) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at net.minecraftforge.common.ForgeStatesProvider.lambda$new$4(ForgeStatesProvider.java:25) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.handleInlineTransition(ModLoader.java:217) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$19(ModLoader.java:209) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
-	at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:209) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$13(ModLoader.java:183) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
-	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:183) ~[fmlcore-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:43) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at net.minecraft.data.Main.main(Main.java:90) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.dataService(CommonLaunchHandler.java:107) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.devService(ForgeDataUserdevLaunchHandler.java:22) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.1.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-	Suppressed: net.minecraftforge.fml.ModLoadingException: fml.modloading.errorduringevent
-		at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:118) ~[javafmllanguage-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.ModLoader.lambda$postEventWithWrapInModOrder$33(ModLoader.java:346) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
-		at net.minecraftforge.fml.ModList.forEachModInOrder(ModList.java:227) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:344) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:337) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.registries.GameData.postRegisterEvents(GameData.java:329) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-		at net.minecraftforge.common.ForgeStatesProvider.lambda$new$4(ForgeStatesProvider.java:25) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-		at net.minecraftforge.fml.ModLoader.handleInlineTransition(ModLoader.java:217) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$19(ModLoader.java:209) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
-		at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:209) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$13(ModLoader.java:183) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
-		at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:183) ~[fmlcore-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:43) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-		at net.minecraft.data.Main.main(Main.java:90) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar:?]
-		at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-		at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-		at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-		at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.dataService(CommonLaunchHandler.java:107) ~[fmlloader-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.devService(ForgeDataUserdevLaunchHandler.java:22) ~[fmlloader-1.20.1-47.3.1.jar:?]
-		at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.1.jar:?]
-		at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-		at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-	Caused by: net.minecraft.ResourceLocationException: Non [a-z0-9/._-] character in path of location: manmememod:RatRod
-		at net.minecraft.resources.ResourceLocation.assertValidPath(ResourceLocation.java:236) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/:?]
-		at net.minecraft.resources.ResourceLocation.<init>(ResourceLocation.java:38) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/:?]
-		at com.mememan.mememanmod.common.registry.MMMEntityTypes.lambda$static$6(MMMEntityTypes.java:33) ~[%23196!/:?]
-		at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-		at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-		at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-		at net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:328) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-		at net.minecraftforge.registries.__EventDispatcher_handleEvent_RegisterEvent.invoke(.dynamic) ~[forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23190%23197!/:?]
-		at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar:?]
-		at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar:?]
-		at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar:?]
-		at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:114) ~[javafmllanguage-1.20.1-47.3.1.jar:?]
-		... 32 more
-[31Jul2024 13:40:35.888] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, rolling back to VANILLA state
-[31Jul2024 13:40:36.751] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, roll back to VANILLA complete
+[04Oct2024 01:50:23.813] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.3.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
+[04Oct2024 01:50:23.817] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.11 by JetBrains s.r.o.; OS Windows 11 arch amd64 version 10.0
+[04Oct2024 01:50:23.916] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[04Oct2024 01:50:23.961] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/pc/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[04Oct2024 01:50:24.265] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.3.1\b9fa98d5c9fa107169a3390a1c8993d2134fbf54\javafmllanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[04Oct2024 01:50:24.272] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.3.1\aaa252b4d4c34d0c02e647d7a2ef3df3bc11d73a\lowcodelanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[04Oct2024 01:50:24.278] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.3.1\1722b26446496b5e686cdf124342e8f7fd33dc91\mclanguage-1.20.1-47.3.1.jar is missing mods.toml file
+[04Oct2024 01:50:24.284] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pc\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.3.1\4ed2bfe4ae3a6c27f587d45f58d648db68d19c00\fmlcore-1.20.1-47.3.1.jar is missing mods.toml file
+[04Oct2024 01:50:24.492] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[04Oct2024 01:50:25.739] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[04Oct2024 01:50:25.741] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\pc\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, manmememod, --all, --output, G:\ManMemeMod\src\generated\resources, --existing, G:\ManMemeMod\src\main\resources]
+[04Oct2024 01:50:26.158] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using G:\ManMemeMod\build\createSrgToMcp\output.srg
+[04Oct2024 01:50:26.449] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [manmememod]
+[04Oct2024 01:50:30.095] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.1, for MC 1.20.1 with MCP 20230612.114412
+[04Oct2024 01:50:30.095] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.1 Initialized
+[04Oct2024 01:50:30.153] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[04Oct2024 01:50:30.578] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pc/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[04Oct2024 01:50:30.578] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pc/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.1_mapped_official_1.20.1/forge-1.20.1-47.3.1_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[04Oct2024 01:50:30.716] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Block Models
+[04Oct2024 01:50:30.736] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Block Models finished after 19 ms
+[04Oct2024 01:50:30.737] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: BlockState Provider
+[04Oct2024 01:50:30.855] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: BlockState Provider finished after 117 ms
+[04Oct2024 01:50:30.855] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Item Models
+[04Oct2024 01:50:30.861] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Item Models finished after 6 ms
+[04Oct2024 01:50:30.862] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Language Provider (en_us)
+[04Oct2024 01:50:30.872] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Language Provider (en_us) finished after 10 ms
+[04Oct2024 01:50:30.872] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[04Oct2024 01:50:30.899] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 27 ms
+[04Oct2024 01:50:30.899] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Block Tags
+[04Oct2024 01:50:30.901] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Block Tags finished after 1 ms
+[04Oct2024 01:50:30.901] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Item Tags
+[04Oct2024 01:50:30.902] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Item Tags finished after 0 ms
+[04Oct2024 01:50:30.902] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: EntityType Tags
+[04Oct2024 01:50:30.902] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: EntityType Tags finished after 0 ms
+[04Oct2024 01:50:30.902] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Man Meme Mod: Painting Tags
+[04Oct2024 01:50:30.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Man Meme Mod: Painting Tags finished after 6 ms
+[04Oct2024 01:50:30.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[04Oct2024 01:50:30.987] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 77 ms
+[04Oct2024 01:50:30.987] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[04Oct2024 01:50:30.987] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 0 ms
+[04Oct2024 01:50:30.987] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 271 ms
+[04Oct2024 01:50:30.994] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 28, old count: 20, new count: 27, removed stale: 2, written: 10
